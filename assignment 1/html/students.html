@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/students.css" type="text/css">
+    <link rel="icon" href="../images/OIP (2).jpg" type="image/jpg">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <img src="../images/OIP (1).jpg" alt="logo education">
+            </div>
+            <div id="home"> 
+                <P id="home2"><a href="../education.html">Home</a></P>
+                <p id="login"><a href="login.html">Login</a></p>
+                <p id="contact"><a href="contact.html">Contact</a></p>
+                <p id="about"><a href="aboutus.html">About Us</a></p>
+            </div>
+        </div>       
+    </header>
+    <main>
+      <div id="slider">
+            <div class="container">
+                <div>
+                    <nav>
+                        <ul>
+                             <li><a href="courses.html">Courses</a> </li>    
+                             <li><a href="../education.html">Students</a></li>
+                             <li><a href="trainers.html">Trainers</a></li>
+                             <li><a href="assignments.html">Assignments</a></li> 
+                             <li><a href="assignment per course per student.html">Assignments Per Student Per Course </a></li>
+                             <li><a href="trainers per course.html">Trainers Per Course </a></li>
+                            <li><a href="Student Per Course.html">Student Per Course </a></li>
+                            <li><a href="Assignments Per Course.html">Assignments Per Course </a></li>
+                                            
+                        </ul>
+                 </nav>
+              </div>
+                <div class="wrapper" class="cf">
+                    <div class="title">
+                        <h1>Students</h1>
+                    </div></br>
+                <form>
+                        <div class="form">
+                            <div>
+                                <button type="button" class="button">New</button>
+                                <button type="button" class="button">Edit</button>
+                            </div></br></br>
+                            <div class="input_field">
+                                <label>First Name</label>
+                                <input type="text" class="input" placeholder="First Name" pattern="[a-zA=Z]{1,15}" title="First Name only contain letters [a-zA-Z]" required >
+                            </div>
+                            <div class="input_field">
+                                <label>Last Name</label>
+                                <input type="text" maxlength="16" class="input" placeholder="Last Name" pattern="[a-zA=Z]{1,15}"title="Last Name only contain letters [a-zA-Z]"  required >
+                            </div>
+                            <div class="input_field">
+                                <label>E-mail</label>
+                                <input type="email" class="input" placeholder="example@gmail.com" required>
+                            </div>
+                            <div class="input_field">
+                                <label>Password</label>
+                                <input type="password" class="input" id="password" placeholder="Give Password" required>
+                            </div>
+                            <div class="input_field">
+                                <label>Confirm Password</label>
+                                <input type="password" class="input" id="confirmpassword" placeholder="Confirm Password" required>
+                                <div class="registrationFormAlert" style="color:green;" id="CheckPasswordMatch"></div>
+                            </div>
+                            <div class="input_field">
+                                <label>Date Of Birth</label>
+                                <input type="date" class="input" placeholder="Input Your Age" max="2003-01-01" min=1960-01-01 required>
+                            </div>
+                            <div class="input_field">
+                                <label>Gender</label>
+                                <div class="custom_select">
+                                    <select>
+                                        <option selected disabled> Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input_field">
+                                <label>Fees &euro;</label> 
+                                <input type="number" class="input" placeholder="Remaining Fees" min="0" required>
+                            </div>
+                            <div>
+                                <button type="reset" class="button" >Clear</button>
+                                <button type="submit" class="button">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+          </div>
+        </div>
+    </main>
+    <script>
+        function checkPasswordMatch() {
+            var password = $("#password").val();
+            var confirmPassword = $("#confirmpassword").val();
+    
+    
+            if (password != confirmPassword)
+                $("#CheckPasswordMatch").html("Passwords not match!");
+            
+                else
+                $("#CheckPasswordMatch").html("Passwords match.");
+        }
+        
+        $(document).ready(function () {
+           $("#confirmpassword").keyup(checkPasswordMatch);
+        });
+    </script>
+</body> 
+</html>              

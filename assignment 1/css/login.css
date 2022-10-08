@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+ 
+header img {
+    width: 80px;
+    height: 80px;
+}
+#logo{
+    width: 80px;
+    height: 100px;
+}
+#home{
+    padding-left: 700px;
+    padding-bottom: 60px;
+}
+#home2{
+    float: left;
+
+}
+#login{
+    float: left;
+    padding-left: 15px;
+}
+#contact{
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#about{
+    float: left;
+}
+
+#slider {
+    height: 900px;
+    background-image: url(../images/education.jpg);
+    background-size: cover;
+    padding-top: 100px;
+}
+.contact-box{
+    width: 500px;
+    background-color: #fff;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position:absolute;
+}
+form{
+    margin: 35px;
+}
+.input-field{
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #777;
+    border-radius: 14px;
+    outline: none;
+}
+.textarea-field{
+    height: 100px;
+    padding-top: 10px;
+}
+.btn{
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 18px;
+    padding: 10px;
+    background-color: #47c35a;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+ 
+/*clearfix*/
+ 
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+ 
+.cf:after {
+    clear: both;
+}
